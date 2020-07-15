@@ -12,6 +12,9 @@ git reflog                          显示使用过的每一次命令
 git checkout -- <filename>          用版本库中的版本替换工作区的版本（撤销工作区的修改）
 git reset HEAD <filename>           把暂存区的修改撤销掉，重新放回工作区
 git rm <filename>                   删除版本库中的文件(需要git commit)
+# --------------------------
+ssh-keygen -t rsa -C "youremail@example.com"   创建SSH Key
+#---------------------------
 git remote add origin git@github.com:supan-code/deeplearn.git   关联远程库(ssh协议)
 git push -u origin master           第一次推送到远端
 git push origin master              第n>=2次推送到远端
