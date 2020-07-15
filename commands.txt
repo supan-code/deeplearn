@@ -37,8 +37,22 @@ git remote                          查看远程库信息
 git remote -v                       显示远程库更详细的信息
 git checkout -b dev origin/dev      创建远程origin的dev的分支到本地
 git pull                            把最新的提交抓取到本地
-# 多人协作
+# ---多人协作---
 git push origin <branch-name>
 git branch --set-upstream-to <branch-name> origin/<branch-name>    如果git pull失败
 git pull
 git push origin <branch-name>
+git rebase                          将本地未push的分叉提交整理为直线（会改变本地的commit历史）
+# ---tags manage---
+git tag <tag-name>                  创建标签
+git tag                             查看所有标签
+git tag <tag-name>  <commit-id>     在指定位置打标签
+git show <tag-name>                 查看标签信息
+git tag -a <tag-name> -m <description>  -a指定标签名，-m指定说明文字
+git tag -d <tag-name>               删除标签
+git push origin <tag-name>          推送标签到远程
+git push origin --tags              推送所有未推送的标签到远程
+    # 删除远程标签
+    git tag -d <tag-name>           先删除本地标签
+    git push origin :refs/tags/<tag-name>
+# ---tags manage end---
