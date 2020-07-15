@@ -24,3 +24,11 @@ git merge dev                       合并指定分支dev到当前分支
 git branch -d dev                   删除指定分支dev
 git switch -c dev                   创建并切换到新的dev分支
 git switch master                   直接切换到master分支
+git merge --no-ff -m "information" dev               以普通模式合并制定分支dev到当前分支
+git log --graph                     以图的形式呈现日志
+git stash                           将当前工作现场“储藏”起来
+git stash list                      查看“储藏”的工作现场
+git stash apply stash@{0}           恢复工作现场，但不删除
+git stash drop                      删除“储藏”的工作现场
+git stash pop                       恢复工作现场，并从stash中删除
+git cherry-pick <commit id>         将另一个分支的修改commit id复制过来
