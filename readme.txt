@@ -1,2 +1,6 @@
 Git is a version control system, git is free software.
-I am so exiting!!
+<<<<<<< HEAD
+I am so exiting!!!
+=======
+I am so exiting!!!
+>>>>>>> feature1
